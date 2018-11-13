@@ -42,7 +42,7 @@ body
   width: 100%;
 }
 .barLine {
-  background-image: url("tab_line.gif");
+  background-image: url("tab_line.gif"/*tpa=http://192.168.0.25:8988/Fantaski/icons/tab_line.gif*/);
   background-repeat: repeat-x;
   width: 100%;
 }
@@ -57,13 +57,13 @@ body
   vertical-align: middle;
 }
 .bar .on {
-  background-image: url("tab_ON.gif");
+  background-image: url("tab_ON.gif"/*tpa=http://192.168.0.25:8988/Fantaski/icons/tab_ON.gif*/);
   width: 150px;
   height: 20px;
   background-repeat: no-repeat;
 }
 .bar .off {
-  background-image: url("tab_OFF.gif");
+  background-image: url("tab_OFF.gif"/*tpa=http://192.168.0.25:8988/Fantaski/icons/tab_OFF.gif*/);
   width: 150px;
   height: 20px;
   background-repeat: no-repeat;
