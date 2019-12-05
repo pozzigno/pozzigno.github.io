@@ -10,7 +10,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
-    <title>Fantaski - 2018/2019</title>
+    <title>Fantaski 2019 - 2020</title>
     <link rel="shortcut icon" href="merdina.ico">
 	<script type="text/javascript" src="jquery-1.12.4.js" tppabs="http://192.168.0.25:8988/Fantaski/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="aa.js" tppabs="http://192.168.0.25:8988/Fantaski/aa.js"></script>
@@ -154,169 +154,18 @@
 		
 	
 	
+	var _TEAMS = new Array();
+	
+	
     </script>
   <link href="selection.css" tppabs="http://192.168.0.25:8988/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
   </head>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
-<title>Fantaski - 2018/2019</title>
-<link href="merdina.ico" rel="shortcut icon">
-<script src="jquery-1.12.4.js" tppabs="http://192.168.0.25:8988/Fantaski/jquery-1.12.4.js" type="text/javascript">
-<script src="aa.js"/*tpa=http://192.168.0.25:8988/Fantaski/aa.js*/ type="text/javascript">
-<script type="text/javascript">
-    
-    /* 
-        funzione di cambio visualizzazione tab
-    */
-    var tab1Value = "ins";
-    var tab2Value = "visu";
-    var tab3Value = "punti";
-    function show(Id) {
-        var tab1 = document.getElementById('tab1');
-        var tab2 = document.getElementById('tab2');
-        var tab3 = document.getElementById('tab3');
-        if(Id==tab1Value) {
-            tab1.className = 'on';
-            tab2.className = 'off';
-            tab3.className = 'off';
-        } else if(Id==tab2Value) {
-            tab1.className = 'off';
-            tab2.className = 'on';
-            tab3.className = 'off';
-        } else if(Id==tab3Value) {
-            tab1.className = 'off';
-            tab2.className = 'off';
-            tab3.className = 'on';
-        }
-        document.getElementById('tabType').value = Id.toUpperCase();
-        document.ff.submit();
-    }
-    
-    function updTotPoints(teamId) {
-        var dd = document.getElementById(teamId + ':POINTS');
-        var ddd = document.getElementById(teamId);
-        var tot = 0;
-        if(dd != null && ddd != null) {
-            var ss = ddd.getElementsByTagName("select");
-            for(var i=0; i<ss.length; i++) {
-                for(var j=0; ss[i].options != null && j<ss[i].options.length; j++) {
-                    if(ss[i].options[j].selected) {
-                        tot += Number(ss[i].options[j].value);
-                    }
-                }
-            }
-        //dd.innerText = tot;
-        dd.innerHTML = tot;
-        }
-    }
-	
-	var points = new Array();
-	
-			points.push({"pos":1,"point":100});
-		
-	
-			points.push({"pos":2,"point":80});
-		
-	
-			points.push({"pos":3,"point":60});
-		
-	
-			points.push({"pos":4,"point":50});
-		
-	
-			points.push({"pos":5,"point":45});
-		
-	
-			points.push({"pos":6,"point":40});
-		
-	
-			points.push({"pos":7,"point":36});
-		
-	
-			points.push({"pos":8,"point":32});
-		
-	
-			points.push({"pos":9,"point":29});
-		
-	
-			points.push({"pos":10,"point":26});
-		
-	
-			points.push({"pos":11,"point":24});
-		
-	
-			points.push({"pos":12,"point":22});
-		
-	
-			points.push({"pos":13,"point":20});
-		
-	
-			points.push({"pos":14,"point":18});
-		
-	
-			points.push({"pos":15,"point":16});
-		
-	
-	
-			points.push({"pos":16,"point":15});
-		
-	
-			points.push({"pos":17,"point":14});
-		
-	
-			points.push({"pos":18,"point":13});
-		
-	
-			points.push({"pos":19,"point":12});
-		
-	
-			points.push({"pos":20,"point":11});
-		
-	
-			points.push({"pos":21,"point":10});
-		
-	
-			points.push({"pos":22,"point":9});
-		
-	
-			points.push({"pos":23,"point":8});
-		
-	
-			points.push({"pos":24,"point":7});
-		
-	
-			points.push({"pos":25,"point":6});
-		
-	
-			points.push({"pos":26,"point":5});
-		
-	
-			points.push({"pos":27,"point":4});
-		
-	
-			points.push({"pos":28,"point":3});
-		
-	
-			points.push({"pos":29,"point":2});
-		
-	
-			points.push({"pos":30,"point":1});
-		
-	
-	
-    
-</script>
-<link type="text/css" rel="stylesheet" href="selection.css" tppabs="http://192.168.0.25:8988/Fantaski/selection.css">
-</head>
-<body>
-</html>
+  
 <body>
 
 <form id="ff" name="ff" action="http://192.168.0.25:8988/Fantaski/gare.jsp" method="get">
  <table border="2" width="100%">
-        <tr><td valign="middle" height="30" align="center" colspan="2" style="font-size:30px;color:red">FantaSci 2018 - 2019</td></tr>
+        <tr><td valign="middle" height="30" align="center" colspan="2" style="font-size:30px;color:red">FantaSci 2019 - 2020</td></tr>
         
         <tr><td width="900">
              
@@ -342,6 +191,140 @@
              <div id="insT" style="visibility:visible">
                  <select class="gare" name="discID" size="1" onchange="document.ff.submit()">
                     <option value="0_0">-</option>
+                    
+                           <option value="48_DH_F" >2019-12-06   Lake Louise (CAN) - DH[F]</option>
+                    
+                           <option value="5_SG_M" >2019-12-06   Beaver Creek (USA) - SG[M]</option>
+                    
+                           <option value="49_DH_F" >2019-12-07   Lake Louise (CAN) - DH[F]</option>
+                    
+                           <option value="6_DH_M" >2019-12-07   Beaver Creek (USA) - DH[M]</option>
+                    
+                           <option value="7_GS_M" >2019-12-08   Beaver Creek (USA) - GS[M]</option>
+                    
+                           <option value="50_SG_F" >2019-12-08   Lake Louise (CAN) - SG[F]</option>
+                    
+                           <option value="8_GS_M" >2019-12-14   Val d Isere (FRA) - GS[M]</option>
+                    
+                           <option value="51_SG_F" >2019-12-14   St.Moritz (SUI) - SG[F]</option>
+                    
+                           <option value="52_SL_F" >2019-12-15   St.Moritz (SUI) - SL[F]</option>
+                    
+                           <option value="9_SL_M" >2019-12-15   Val d Isere (FRA) - SL[M]</option>
+                    
+                           <option value="53_GS_F" >2019-12-17   Courchevel (FRA) - GS[F]</option>
+                    
+                           <option value="10_SG_M" >2019-12-20   Val Gardena (ITA) - SG[M]</option>
+                    
+                           <option value="11_DH_M" >2019-12-21   Val Gardena (ITA) - DH[M]</option>
+                    
+                           <option value="54_DH_F" >2019-12-21   Val d Isere (FRA) - DH[F]</option>
+                    
+                           <option value="12_GS_M" >2019-12-22   Alta Badia (ITA) - GS[M]</option>
+                    
+                           <option value="13_GS_M" >2019-12-23   Alta Badia (ITA) - GS[M]</option>
+                    
+                           <option value="14_DH_M" >2019-12-28   Bormio (ITA) - DH[M]</option>
+                    
+                           <option value="56_GS_F" >2019-12-28   Lienz (AUT) - GS[F]</option>
+                    
+                           <option value="57_SL_F" >2019-12-29   Lienz (AUT) - SL[F]</option>
+                    
+                           <option value="58_SL_F" >2020-01-04   Zagreb (CRO) - SL[F]</option>
+                    
+                           <option value="16_SL_M" >2020-01-05   Zagreb (CRO) - SL[M]</option>
+                    
+                           <option value="17_SL_M" >2020-01-08   Madonna di Campiglio (ITA) - SL[M]</option>
+                    
+                           <option value="18_GS_M" >2020-01-11   Adelboden (SUI) - GS[M]</option>
+                    
+                           <option value="59_DH_F" >2020-01-11   Altenmarkt (AUT) - DH[F]</option>
+                    
+                           <option value="19_SL_M" >2020-01-12   Adelboden (SUI) - SL[M]</option>
+                    
+                           <option value="61_SL_F" >2020-01-14   Flachau (AUT) - SL[F]</option>
+                    
+                           <option value="21_DH_M" >2020-01-18   Wengen (SUI) - DH[M]</option>
+                    
+                           <option value="62_GS_F" >2020-01-18   Sestriere (ITA) - GS[F]</option>
+                    
+                           <option value="22_SL_M" >2020-01-19   Wengen (SUI) - SL[M]</option>
+                    
+                           <option value="63_SL_F" >2020-01-19   Sestriere (ITA) - SL[F]</option>
+                    
+                           <option value="23_SG_M" >2020-01-24   Kitzbuhel (AUT) - SG[M]</option>
+                    
+                           <option value="64_DH_F" >2020-01-25   Bansko (BUL) - DH[F]</option>
+                    
+                           <option value="24_DH_M" >2020-01-25   Kitzbuhel (AUT) - DH[M]</option>
+                    
+                           <option value="65_SG_F" >2020-01-26   Bansko (BUL) - SG[F]</option>
+                    
+                           <option value="25_SL_M" >2020-01-26   Kitzbuhel (AUT) - SL[M]</option>
+                    
+                           <option value="26_SL_M" >2020-01-28   Schladming (AUT) - SL[M]</option>
+                    
+                           <option value="66_DH_F" >2020-02-01   Sochi (RUS) - DH[F]</option>
+                    
+                           <option value="27_DH_M" >2020-02-01   Garmisch (GER) - DH[M]</option>
+                    
+                           <option value="67_SG_F" >2020-02-02   Sochi (RUS) - SG[F]</option>
+                    
+                           <option value="28_GS_M" >2020-02-02   Garmisch (GER) - GS[M]</option>
+                    
+                           <option value="68_DH_F" >2020-02-08   Garmisch (GER) - DH[F]</option>
+                    
+                           <option value="29_SL_M" >2020-02-08   Chamonix (FRA) - SL[M]</option>
+                    
+                           <option value="69_SG_F" >2020-02-09   Garmisch (GER) - SG[F]</option>
+                    
+                           <option value="30_GS_M" >2020-02-09   Chamonix (FRA) - GS[M]</option>
+                    
+                           <option value="70_GS_F" >2020-02-15   Maribor (SLO) - GS[F]</option>
+                    
+                           <option value="31_DH_M" >2020-02-15   Yanquing (CHN) - DH[M]</option>
+                    
+                           <option value="32_SG_M" >2020-02-16   Yanquing (CHN) - SG[M]</option>
+                    
+                           <option value="71_SL_F" >2020-02-16   Maribor (SLO) - SL[F]</option>
+                    
+                           <option value="72_DH_F" >2020-02-22   Crans Montana (SUI) - DH[F]</option>
+                    
+                           <option value="33_SG_M" >2020-02-29   Hinterstoder (AUT) - SG[M]</option>
+                    
+                           <option value="74_SG_F" >2020-02-29   La Thuile (ITA) - SG[F]</option>
+                    
+                           <option value="35_DH_M" >2020-03-07   Kvitfjell (NOR) - DH[M]</option>
+                    
+                           <option value="76_GS_F" >2020-03-07   Ofterschwang (GER) - GS[F]</option>
+                    
+                           <option value="36_SG_M" >2020-03-08   Kvitfjell (NOR) - SG[M]</option>
+                    
+                           <option value="77_SL_F" >2020-03-08   Ofterschwang (GER) - SL[F]</option>
+                    
+                           <option value="79_GS_F" >2020-03-13   Are (SWE) - GS[F]</option>
+                    
+                           <option value="38_GS_M" >2020-03-14   Kranjska Gora (SLO) - GS[M]</option>
+                    
+                           <option value="80_SL_F" >2020-03-14   Are (SWE) - SL[F]</option>
+                    
+                           <option value="39_SL_M" >2020-03-15   Kranjska Gora (SLO) - SL[M]</option>
+                    
+                           <option value="81_DH_F" >2020-03-18   Cortina d Ampezzo (ITA) - DH[F]</option>
+                    
+                           <option value="40_DH_M" >2020-03-18   Cortina d Ampezzo (ITA) - DH[M]</option>
+                    
+                           <option value="82_SG_F" >2020-03-19   Cortina d Ampezzo (ITA) - SG[F]</option>
+                    
+                           <option value="41_SG_M" >2020-03-19   Cortina d Ampezzo (ITA) - SG[M]</option>
+                    
+                           <option value="42_GS_M" >2020-03-21   Cortina d Ampezzo (ITA) - GS[M]</option>
+                    
+                           <option value="83_SL_F" >2020-03-21   Cortina d Ampezzo (ITA) - SL[F]</option>
+                    
+                           <option value="84_GS_F" >2020-03-22   Cortina d Ampezzo (ITA) - GS[F]</option>
+                    
+                           <option value="43_SL_M" >2020-03-22   Cortina d Ampezzo (ITA) - SL[M]</option>
                            
                  </select>
                  
@@ -374,13 +357,22 @@
 		<tr><td><a href="index.jsp-pag=frmz_f.htm" tppabs="http://192.168.0.25:8988/Fantaski/index.jsp?pag=frmz_f"><h1 style="font-size:25px;">Formazioni F</h1></a></td></tr>
     </table>
 				
-				<table><tbody>
-					<tr><td>
-						<h1 style="color: rgb(102, 102, 102);font-size:25px;">Compilazione Risultato Corrente</h1>
-						<textarea id="aaa" style="width:400px;height:300px"></textarea>
-						<br/>
-						<button type="button" onclick="javascript:tokenizzalo('aaa')">Compila</button>
-					</td></tr>
+				<table cellpadding="0" cellspacing="0"><tbody>
+					<tr
+                                            <td colspan="2">
+						<h1 style="color: rgb(102, 102, 102);font-size:25px;">Compilazione Risultato Corrente<button type="button" onclick="javascript:tokenizzalo('aaa')">Compila</button></h1>
+                                            </td>
+                                        </tr>
+					<tr>
+                                            <td>
+                                                <h3 style="height: 15px;">Totali</h3>
+                                                <textarea id="aaa" style="width:300px;height:300px"></textarea>
+                                            </td>
+                                            <td>
+                                                <h3 style="height: 15px;">Non Trovati</h3>
+						<textarea id="aaa_not" style="width:300px;height:300px"></textarea>
+                                            </td>
+                                        </tr>
 				</tbody></table>
 			
 			</div>

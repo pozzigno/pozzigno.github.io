@@ -89,7 +89,6 @@ a#tab:active {
 /* ***************************************************************************/
 a:link,a:visited {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 9px;
 	text-decoration: none;
 	color: #666666;
 }
@@ -172,6 +171,12 @@ a:hover, a:active{
     font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
     font-size: 12px; 
 }
+.cognBold {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px; 
+    font-weight: bold;
+    font-style: italic;
+}
 .gare {
     width: 300px;
     position: relative;
@@ -184,7 +189,6 @@ a.cognLink:link,a.cognLink:visited,a.cognLink:hover,a.cognLink:active {
   color:black;
   cursor:pointer;
   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 12px; 
     font-weight: bold;
     font-style: italic;
 }

@@ -1,4 +1,21 @@
-﻿function updateChoose(check,cod,disc) {
+﻿function fantaskiForm(form) {
+	form.action='updater';
+	
+	var msg = "";
+	for(var i=0; i<_TEAMS.length; i++) {
+		var dd = document.getElementById(_TEAMS[i].cod);
+		var cc = $(dd).find("select[name^='atl_'] option[value!=0]:selected");
+		if(cc.length > 4)
+			msg += _TEAMS[i].name + ' => ' + cc.length + '\n';
+	}
+	
+	if(msg.length > 0)
+		alert("Attenzione! Le seguenti squadre hanno più di 4 preferenze:\n" + msg);
+	else {
+		form.submit();
+	}
+}
+function updateChoose(check,cod,disc) {
     xmlhttp = new XMLHttpRequest();
     var uu = "updaterChoose" + "?" + "cod="+cod + "&discID=" + disc + "&choose=" + check.checked;
     xmlhttp.open("GET",uu,true);
@@ -10,10 +27,14 @@ function telecomandoForm(url,go) {
 }
 function tokenizzalo(id) {
 	
+	var tutti = new Array();
+	var nntrovati = new Array();
+	var nntrovatiSTR = "";
+	var found = false;
 	//$("select[name^='atl_'] option").removeAttr("selected");
 	//$("select[name^='atl_'] option").removeProp("selected");
 	$("select[name^='atl_'] option[value=0]").attr("selected",true);
-
+	
     var dd = document.getElementById(id);
 	if(dd != null && dd.value != null) {
 		var dds = dd.value.split("\n");
@@ -30,25 +51,48 @@ function tokenizzalo(id) {
 				}
 			}
 			
-			console.log("Parto con: " + nome + "," + cogn + "," + pos + "," + point);
+			if(cogn != null && cogn.length > 0) {
 			
-			$("input:hidden[zname='HH_cogn'][value^='" + cogn + "']").each(function(){
-				var cod = $(this).parent().find("input:hidden[zname='HH_cod']").val();
-				var name = $(this).parent().find("input:hidden[zname='HH_nome']").val();
-				if(name == nome) {
-					//console.log("Trovo ESATTO: " + $(this).val() + " - " + name + cod);
-					var dd = $(this).parent().find("select.HH_point_" + cod + " option[value=" + point + "]").attr("selected",true);
-					return;
-				} else {
-					var dd = $(this).parent().find("select.HH_point_" + cod + " option:selected");
-                                        console.log("Trovo: " + $(this).val() + " - " + name + cod);
-					// se diverso da 0, non faccio nulla
-					if(dd != null && dd.val() == "0") {
-						$(this).parent().find("select.HH_point_" + cod + " option[value=" + point + "]").attr("selected",true);
-						//console.log("Trovo: " + $(this).val() + " - " + name + cod);
+				found = false;
+				
+				//console.log("Parto con: " + nome + "," + cogn + "," + pos + "," + point);
+				
+				var jj = {nome: nome, cognome: cogn, punti: point, pos: pos};
+				tutti.push(jj);
+				
+				var cc = $("input:hidden[zname='HH_cogn'][value^='" + cogn + "']");
+				if(cc != null) {
+					if(cc.length > 1) {
+						// se trovo più cognomi, cerco per nome
+						cc.each(function(){
+							found = true;
+							var cod = $(this).parent().find("input:hidden[zname='HH_cod']").val();
+							var name = $(this).parent().find("input:hidden[zname='HH_nome']").val();
+							if(name == nome) {
+								$(this).parent().find("select.HH_point_" + cod + " option[value=0]").attr("selected",false);
+								$(this).parent().find("select.HH_point_" + cod + " option[value=" + point + "]").attr("selected",true);
+							}
+						});
+					} else {
+						// cerco solo per cognome
+						cc.each(function() {
+							found = true;
+							var cod = $(this).parent().find("input:hidden[zname='HH_cod']").val();
+							var name = $(this).parent().find("input:hidden[zname='HH_nome']").val();
+							var dd = $(this).parent().find("select.HH_point_" + cod + " option:selected");
+							// se diverso da 0, non faccio nulla
+							if(dd != null && dd.val() == "0") {
+								$(this).parent().find("select.HH_point_" + cod + " option[value=0]").attr("selected",false);
+								$(this).parent().find("select.HH_point_" + cod + " option[value=" + point + "]").attr("selected",true);
+							}
+						});
 					}
 				}
-			});
+				if(!found) {
+					nntrovatiSTR += pos + ') ' + cogn + ' ' + nome + "\n";
+					nntrovati.push(jj);
+				}
+			}
 		}
 	}
 	
@@ -60,7 +104,9 @@ function tokenizzalo(id) {
 	updTotPoints('D');
 	updTotPoints('E');
 	
-	//$("select[name^='atl_'] option:selected").each(function(){console.log($(this).attr("value"));});
+	console.log(tutti);
+	console.log(nntrovati);
+	$('#' + id + '_not').val(nntrovatiSTR);
 }
 function replaceSborona(s) {
 	if(s == null) return null;
