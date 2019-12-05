@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+<html>
+  <head>
+  <script type="text/javascript" src="aa.js" tppabs="http://192.168.0.25:8988/Fantaski/aa.js"></script>
+  <script type="text/javascript">    
+    /* 
+        funzione di cambio visualizzazione tab
+    */
+ var tab1Value = "ins";
+    var tab2Value = "visu";
+    var tab3Value = "punti";
+    function show(divId) {
+        var tab1 = document.getElementById('tab1');
+        var tab2 = document.getElementById('tab2');
+        var tab3 = document.getElementById('tab3');
+        if(divId==tab1Value) {
+            tab1.className = 'on';
+            tab2.className = 'off';
+            tab3.className = 'off';
+        } else if(divId==tab2Value) {
+            tab1.className = 'off';
+            tab2.className = 'on';
+            tab3.className = 'off';
+        } else if(divId==tab3Value) {
+            tab1.className = 'off';
+            tab2.className = 'off';
+            tab3.className = 'on';
+        }
+    }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+    <title>Fantaski 2019 - 2020</title>
+    <link rel="shortcut icon" href="merdina.ico">
+    <link href="selection.css" tppabs="http://192.168.0.25:8988/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+
+<table border="2" width="1050">
+        <tr><td valign="" height="30" align="center" colspan="2" style="font-size:30px;color:red">FantaSci 2019 - 2020</td></tr>
+           <tr><td valign="top">
+        
+<table border="0" width="900" cellpadding="0" cellspacing="0">
+     <tr><td>
+     <span class="bar">
+        <span class="off" id="tab1">
+            <a id="tab" href="gare.jsp-tab=INS.htm" tppabs="http://192.168.0.25:8988/Fantaski/gare.jsp?tab=INS" onClick="show('ins')">Inserimento Gare</a>
+        </span>
+        <span class="on" id="tab2">
+            <a id="tab" href="visuaGare.jsp-tab=VISU.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?tab=VISU" onClick="show('visu')">Visualizzazione Gare</a>
+        </span>
+        <span class="off" id="tab3">
+            <a id="tab" href="puntiGare.jsp-tab=PUNTI.htm" tppabs="http://192.168.0.25:8988/Fantaski/puntiGare.jsp?tab=PUNTI" onClick="show('punti')">Punti Totali per Gara</a>
+        </span>
+     </span>
+     </td></tr>
+     <tr><td class="barLine">&nbsp;</td></tr>  
+     
+     <tr><td>
+     <table>
+     <tr><td valign="top" width="300">
+         <table cellpadding="0" cellspacing="0">
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=44_GS_F.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=44_GS_F" style="">2019-10-26   Soelden (AUT) - GS[F]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=1_GS_M.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=1_GS_M" style="">2019-10-27   Soelden (AUT) - GS[M]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=45_SL_F.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=45_SL_F" style="">2019-11-23   Levi (FIN) - SL[F]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=2_SL_M.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=2_SL_M" style="">2019-11-24   Levi (FIN) - SL[M]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=3_DH_M.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=3_DH_M" style="">2019-11-30   Lake Louise (CAN) - DH[M]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=46_GS_F.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=46_GS_F" style="">2019-11-30   Killington (USA) - GS[F]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=4_SG_M.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=4_SG_M" style="">2019-12-01   Lake Louise (CAN) - SG[M]</a>
+                   </td></tr>
+            
+                   <tr><td>
+                   <a href="visuaGare.jsp-discID=47_SL_F.htm" tppabs="http://192.168.0.25:8988/Fantaski/visuaGare.jsp?discID=47_SL_F" style="">2019-12-01   Killington (USA) - SL[F]</a>
+                   </td></tr>
+            
+        </table>
+     </td>
+     
+     <td>    
+            <table border="1" cellpadding="5" cellspacing="3">
+               
+            </table>
+
+     </td>
+     </tr>
+     </table>
+    </td></tr> 
+  
+    </table>
+    </td>
+    <td valign="top">
+    <table><tr><td>    <table>
+        <tr><td><a href="index.jsp-pag=squadre.htm" tppabs="http://192.168.0.25:8988/Fantaski/index.jsp?pag=squadre"><h1 style="font-size:25px;">Squadre</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=gare.htm" tppabs="http://192.168.0.25:8988/Fantaski/index.jsp?pag=gare"><h1 style="font-size:25px;">Gare</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=class.htm" tppabs="http://192.168.0.25:8988/Fantaski/index.jsp?pag=class"><h1 style="font-size:25px;">Classifiche</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=frmz_m.htm" tppabs="http://192.168.0.25:8988/Fantaski/index.jsp?pag=frmz_m"><h1 style="font-size:25px;">Formazioni M</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=frmz_f.htm" tppabs="http://192.168.0.25:8988/Fantaski/index.jsp?pag=frmz_f"><h1 style="font-size:25px;">Formazioni F</h1></a></td></tr>
+    </table></td></tr></table>
+    
+    </td>
+    </tr>
+    </table>
+      
+  </body>
+</html>

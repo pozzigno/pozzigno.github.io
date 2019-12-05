@@ -1,0 +1,228 @@
+/* impostazioni globali */
+body
+{
+	background: rgb(255,255,255);
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+        margin: 0px;
+        padding: 0px;
+}
+.container {
+  background-color: white;
+  color: black;
+  DISPLAY: block;
+  POSITION: relative;
+  width: 895px;
+}
+@media print {
+    .notPrinted {
+        display: none;
+    }
+}
+/* ***************************************************************************/
+.butt {
+    font-family: Verdana;
+    font-style: italic;
+    font-weight: bold;
+    width: 140px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    text-align: center;
+    vertical-align: middle;
+    clear: both;
+    float: left;
+    position: relative;
+}
+.bar {
+  display: block;
+  padding-top:1px;
+  padding-left:1px;
+  width: 100%;
+}
+.barLine {
+  background-image: url("tab_line.gif"/*tpa=http://192.168.0.25:8988/Fantaski/icons/tab_line.gif*/);
+  background-repeat: repeat-x;
+  width: 100%;
+}
+.bar span,.bar div {
+  position:relative;
+  display:block;
+  float:left;
+  height: 25px;
+  width: 150px;
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: middle;
+}
+.bar .on {
+  background-image: url("tab_ON.gif"/*tpa=http://192.168.0.25:8988/Fantaski/icons/tab_ON.gif*/);
+  width: 150px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+.bar .off {
+  background-image: url("tab_OFF.gif"/*tpa=http://192.168.0.25:8988/Fantaski/icons/tab_OFF.gif*/);
+  width: 150px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+#tab {
+  display:block;
+  position:relative;
+  padding-top: 5px;
+  color:rgb(115,115,115);
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+a#tab:link,a#tab:visited {
+  text-decoration: none;
+}
+a#tab:hover {
+  text-decoration: underline;
+}
+a#tab:active {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ***************************************************************************/
+a:link,a:visited {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #666666;
+}
+a:hover, a:active{
+  color: red;
+  text-decoration: underline;
+}
+.all {
+    color:blue;
+}
+/* **************************************************************************/
+.teamins {
+    position:relative;
+    DISPLAY: block;
+    HEIGHT: 150px; 
+    width: 320px;
+    overflow:auto;
+    border: 1px solid #666666;
+    padding: 5px;
+    clear: both;
+}
+.teamInsCont {
+    position: relative;
+    display: block;
+    HEIGHT: 150px; 
+    width: 320px;
+    margin: 30px;
+    float: left;
+}
+.team {
+    position:absolute;
+    top:10px;
+    left:10px;
+    display: block;
+    width: 95%;
+    height: 95%;
+}
+.teamTitle {
+    position: relative;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 22px; 
+    font-weight: bold;
+    font-style: italic;
+    display: inline;
+    float: left;
+}
+.teamPoint {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 18px; 
+    color: Red;
+    display: inline;
+    float: right;
+    clear: right;
+}
+.teamContainer {
+    position:relative;
+    overflow:auto;
+    width: 895px;
+    height: 700px;
+}
+.teamContainer2 {
+    position:relative;
+    width: 895px;
+    height: 700px;
+}
+.visua {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width: 600px;
+    height: 600px;
+}
+.cogn {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px; 
+    font-weight: bold;
+    font-style: italic;
+}
+.cogn2 {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px; 
+}
+.cognBold {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px; 
+    font-weight: bold;
+    font-style: italic;
+}
+.gare {
+    width: 300px;
+    position: relative;
+    float: left;
+    clear: left;
+    margin: 20px;
+}
+a.cognLink:link,a.cognLink:visited,a.cognLink:hover,a.cognLink:active {
+  text-decoration: underline;
+  color:black;
+  cursor:pointer;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+.tableDisc {
+    position: relative;
+    height: 130px;
+    overflow: auto;
+}
+.tableDisc2 {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+.tableA {
+    background-color: rgb(165,255,165);
+}
+.tableB {
+    background-color: rgb(255,148,148);
+}
+.tableC {
+    background-color: rgb(165,231,255);
+}
+.tableD {
+    background-color: rgb(255,214,255);
+}
+.tableE {
+    background-color: rgb(231,231,231);
+}
+.disc {
+    border-bottom: 2px dotted black;
+    font-size: 9pt;
+    font-weight: bold;
+}
+.disc_separ {
+    /*border-bottom: 2px solid black;
+    border-top: 2px solid black;*/
+}
