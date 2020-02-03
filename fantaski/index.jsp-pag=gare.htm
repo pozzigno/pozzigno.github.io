@@ -12,8 +12,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
     <title>Fantaski 2019 - 2020</title>
     <link rel="shortcut icon" href="merdina.ico">
+	<link href="selection.css" tppabs="http://192.168.0.25:8988/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="jquery-1.12.4.js" tppabs="http://192.168.0.25:8988/Fantaski/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="aa.js" tppabs="http://192.168.0.25:8988/Fantaski/aa.js"></script>
+	
   <script type="text/javascript">    
     /* 
         funzione di cambio visualizzazione tab
@@ -192,127 +194,57 @@
                  <select class="gare" name="discID" size="1" onchange="document.ff.submit()">
                     <option value="0_0">-</option>
                     
-                           <option value="48_DH_F" >2019-12-06   Lake Louise (CAN) - DH[F]</option>
-                    
-                           <option value="5_SG_M" >2019-12-06   Beaver Creek (USA) - SG[M]</option>
-                    
-                           <option value="49_DH_F" >2019-12-07   Lake Louise (CAN) - DH[F]</option>
-                    
-                           <option value="6_DH_M" >2019-12-07   Beaver Creek (USA) - DH[M]</option>
-                    
-                           <option value="7_GS_M" >2019-12-08   Beaver Creek (USA) - GS[M]</option>
-                    
-                           <option value="50_SG_F" >2019-12-08   Lake Louise (CAN) - SG[F]</option>
-                    
-                           <option value="8_GS_M" >2019-12-14   Val d Isere (FRA) - GS[M]</option>
-                    
-                           <option value="51_SG_F" >2019-12-14   St.Moritz (SUI) - SG[F]</option>
-                    
-                           <option value="52_SL_F" >2019-12-15   St.Moritz (SUI) - SL[F]</option>
-                    
-                           <option value="9_SL_M" >2019-12-15   Val d Isere (FRA) - SL[M]</option>
-                    
-                           <option value="53_GS_F" >2019-12-17   Courchevel (FRA) - GS[F]</option>
-                    
-                           <option value="10_SG_M" >2019-12-20   Val Gardena (ITA) - SG[M]</option>
-                    
-                           <option value="11_DH_M" >2019-12-21   Val Gardena (ITA) - DH[M]</option>
-                    
-                           <option value="54_DH_F" >2019-12-21   Val d Isere (FRA) - DH[F]</option>
-                    
-                           <option value="12_GS_M" >2019-12-22   Alta Badia (ITA) - GS[M]</option>
-                    
-                           <option value="13_GS_M" >2019-12-23   Alta Badia (ITA) - GS[M]</option>
-                    
-                           <option value="14_DH_M" >2019-12-28   Bormio (ITA) - DH[M]</option>
-                    
-                           <option value="56_GS_F" >2019-12-28   Lienz (AUT) - GS[F]</option>
-                    
-                           <option value="57_SL_F" >2019-12-29   Lienz (AUT) - SL[F]</option>
-                    
-                           <option value="58_SL_F" >2020-01-04   Zagreb (CRO) - SL[F]</option>
-                    
-                           <option value="16_SL_M" >2020-01-05   Zagreb (CRO) - SL[M]</option>
-                    
-                           <option value="17_SL_M" >2020-01-08   Madonna di Campiglio (ITA) - SL[M]</option>
-                    
-                           <option value="18_GS_M" >2020-01-11   Adelboden (SUI) - GS[M]</option>
-                    
-                           <option value="59_DH_F" >2020-01-11   Altenmarkt (AUT) - DH[F]</option>
-                    
-                           <option value="19_SL_M" >2020-01-12   Adelboden (SUI) - SL[M]</option>
-                    
-                           <option value="61_SL_F" >2020-01-14   Flachau (AUT) - SL[F]</option>
-                    
-                           <option value="21_DH_M" >2020-01-18   Wengen (SUI) - DH[M]</option>
-                    
-                           <option value="62_GS_F" >2020-01-18   Sestriere (ITA) - GS[F]</option>
-                    
-                           <option value="22_SL_M" >2020-01-19   Wengen (SUI) - SL[M]</option>
-                    
-                           <option value="63_SL_F" >2020-01-19   Sestriere (ITA) - SL[F]</option>
-                    
-                           <option value="23_SG_M" >2020-01-24   Kitzbuhel (AUT) - SG[M]</option>
-                    
-                           <option value="64_DH_F" >2020-01-25   Bansko (BUL) - DH[F]</option>
-                    
-                           <option value="24_DH_M" >2020-01-25   Kitzbuhel (AUT) - DH[M]</option>
-                    
-                           <option value="65_SG_F" >2020-01-26   Bansko (BUL) - SG[F]</option>
-                    
-                           <option value="25_SL_M" >2020-01-26   Kitzbuhel (AUT) - SL[M]</option>
-                    
                            <option value="26_SL_M" >2020-01-28   Schladming (AUT) - SL[M]</option>
                     
-                           <option value="66_DH_F" >2020-02-01   Sochi (RUS) - DH[F]</option>
-                    
                            <option value="27_DH_M" >2020-02-01   Garmisch (GER) - DH[M]</option>
+                    
+                           <option value="66_DH_F" >2020-02-01   Sochi (RUS) - DH[F]</option>
                     
                            <option value="67_SG_F" >2020-02-02   Sochi (RUS) - SG[F]</option>
                     
                            <option value="28_GS_M" >2020-02-02   Garmisch (GER) - GS[M]</option>
                     
-                           <option value="68_DH_F" >2020-02-08   Garmisch (GER) - DH[F]</option>
-                    
                            <option value="29_SL_M" >2020-02-08   Chamonix (FRA) - SL[M]</option>
                     
-                           <option value="69_SG_F" >2020-02-09   Garmisch (GER) - SG[F]</option>
+                           <option value="68_DH_F" >2020-02-08   Garmisch (GER) - DH[F]</option>
                     
                            <option value="30_GS_M" >2020-02-09   Chamonix (FRA) - GS[M]</option>
+                    
+                           <option value="69_SG_F" >2020-02-09   Garmisch (GER) - SG[F]</option>
                     
                            <option value="70_GS_F" >2020-02-15   Maribor (SLO) - GS[F]</option>
                     
                            <option value="31_DH_M" >2020-02-15   Yanquing (CHN) - DH[M]</option>
                     
-                           <option value="32_SG_M" >2020-02-16   Yanquing (CHN) - SG[M]</option>
-                    
                            <option value="71_SL_F" >2020-02-16   Maribor (SLO) - SL[F]</option>
+                    
+                           <option value="32_SG_M" >2020-02-16   Yanquing (CHN) - SG[M]</option>
                     
                            <option value="72_DH_F" >2020-02-22   Crans Montana (SUI) - DH[F]</option>
                     
-                           <option value="33_SG_M" >2020-02-29   Hinterstoder (AUT) - SG[M]</option>
-                    
                            <option value="74_SG_F" >2020-02-29   La Thuile (ITA) - SG[F]</option>
                     
-                           <option value="35_DH_M" >2020-03-07   Kvitfjell (NOR) - DH[M]</option>
+                           <option value="33_SG_M" >2020-02-29   Hinterstoder (AUT) - SG[M]</option>
                     
                            <option value="76_GS_F" >2020-03-07   Ofterschwang (GER) - GS[F]</option>
                     
-                           <option value="36_SG_M" >2020-03-08   Kvitfjell (NOR) - SG[M]</option>
+                           <option value="35_DH_M" >2020-03-07   Kvitfjell (NOR) - DH[M]</option>
                     
                            <option value="77_SL_F" >2020-03-08   Ofterschwang (GER) - SL[F]</option>
                     
-                           <option value="79_GS_F" >2020-03-13   Are (SWE) - GS[F]</option>
+                           <option value="36_SG_M" >2020-03-08   Kvitfjell (NOR) - SG[M]</option>
                     
-                           <option value="38_GS_M" >2020-03-14   Kranjska Gora (SLO) - GS[M]</option>
+                           <option value="79_GS_F" >2020-03-13   Are (SWE) - GS[F]</option>
                     
                            <option value="80_SL_F" >2020-03-14   Are (SWE) - SL[F]</option>
                     
+                           <option value="38_GS_M" >2020-03-14   Kranjska Gora (SLO) - GS[M]</option>
+                    
                            <option value="39_SL_M" >2020-03-15   Kranjska Gora (SLO) - SL[M]</option>
                     
-                           <option value="81_DH_F" >2020-03-18   Cortina d Ampezzo (ITA) - DH[F]</option>
-                    
                            <option value="40_DH_M" >2020-03-18   Cortina d Ampezzo (ITA) - DH[M]</option>
+                    
+                           <option value="81_DH_F" >2020-03-18   Cortina d Ampezzo (ITA) - DH[F]</option>
                     
                            <option value="82_SG_F" >2020-03-19   Cortina d Ampezzo (ITA) - SG[F]</option>
                     
