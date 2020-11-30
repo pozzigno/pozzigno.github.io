@@ -1,4 +1,10 @@
-﻿function fantaskiForm(form) {
+﻿function setZeroPoints(teamCod,skierCod) {
+	$('#' + teamCod).find("select.HH_point_" + skierCod + " option[value!=0]").attr("selected",false);
+	$('#' + teamCod).find("select.HH_point_" + skierCod).val(0);
+
+	updTotPoints(teamCod);
+}
+function fantaskiForm(form) {
 	form.action='updater';
 	
 	var msg = "";
@@ -98,11 +104,11 @@ function tokenizzalo(id) {
 	
 	
 	// aggiorna dati squadre
-	updTotPoints('A');
-	updTotPoints('B');
-	updTotPoints('C');
-	updTotPoints('D');
-	updTotPoints('E');
+	updTotPoints('a');
+	updTotPoints('b');
+	updTotPoints('m');
+	updTotPoints('p');
+	updTotPoints('v');
 	
 	console.log(tutti);
 	console.log(nntrovati);
