@@ -1,4 +1,27 @@
-﻿function setZeroPoints(teamCod,skierCod) {
+﻿function updateDisc(htmlObj,cod,disc,isActive) {
+	
+	var aatt = $(htmlObj).attr('is_active');
+	
+	isActive = aatt != null ? (aatt == 'true'): isActive;
+	
+	var hh = null;
+	if(!isActive) {
+		hh = '<img src="icons/ok.gif" height="15" width="15" alt=""/>';
+	} else {
+		hh = '&nbsp;'
+	}
+	
+	$(htmlObj).attr('is_active',!isActive);
+	
+    var uu = "updaterChoose" + "?" + "type=upddisc" + "&cod="+cod + "&discID=" + disc + "&choose=" + !isActive;
+    $.ajax({
+  		url: uu,
+  		context: htmlObj
+	}).done(function() {
+  		$( this ).html(hh);
+	});
+}
+function setZeroPoints(teamCod,skierCod) {
 	$('#' + teamCod).find("select.HH_point_" + skierCod + " option[value!=0]").attr("selected",false);
 	$('#' + teamCod).find("select.HH_point_" + skierCod).val(0);
 
@@ -71,10 +94,11 @@ function tokenizzalo(id) {
 					if(cc.length > 1) {
 						// se trovo più cognomi, cerco per nome
 						cc.each(function(){
-							found = true;
 							var cod = $(this).parent().find("input:hidden[zname='HH_cod']").val();
 							var name = $(this).parent().find("input:hidden[zname='HH_nome']").val();
-							if(name == nome) {
+							if(name.trim() == nome.trim()) {
+								console.log(name + ' ' + cogn);
+								found = true;
 								$(this).parent().find("select.HH_point_" + cod + " option[value=0]").attr("selected",false);
 								$(this).parent().find("select.HH_point_" + cod + " option[value=" + point + "]").attr("selected",true);
 							}

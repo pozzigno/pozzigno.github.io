@@ -20,6 +20,22 @@ body
     }
 }
 /* ***************************************************************************/
+.disc_upd {
+	cursor: pointer;
+}
+.disc_upd:hover {
+	opacity: 0.5;
+	background-color: gray;
+}
+.text_order {
+	cursor: pointer;
+	font-weight:bolder;
+}
+.text_order:hover {
+	text-decoration: underline;
+	opacity: 0.5;
+	background-color: gray;
+}
 .butt {
     font-family: Verdana;
     font-style: italic;
@@ -42,7 +58,7 @@ body
   width: 100%;
 }
 .barLine {
-  background-image: url("tab_line.gif"/*tpa=http://127.0.0.1:8988/Fantaski/icons/tab_line.gif*/);
+  background-image: url("tab_line.gif"/*tpa=http://localhost:8080/fantaski/icons/tab_line.gif*/);
   background-repeat: repeat-x;
   width: 100%;
 }
@@ -57,13 +73,13 @@ body
   vertical-align: middle;
 }
 .bar .on {
-  background-image: url("tab_ON.gif"/*tpa=http://127.0.0.1:8988/Fantaski/icons/tab_ON.gif*/);
+  background-image: url("tab_ON.gif"/*tpa=http://localhost:8080/fantaski/icons/tab_ON.gif*/);
   width: 150px;
   height: 20px;
   background-repeat: no-repeat;
 }
 .bar .off {
-  background-image: url("tab_OFF.gif"/*tpa=http://127.0.0.1:8988/Fantaski/icons/tab_OFF.gif*/);
+  background-image: url("tab_OFF.gif"/*tpa=http://localhost:8080/fantaski/icons/tab_OFF.gif*/);
   width: 150px;
   height: 20px;
   background-repeat: no-repeat;
@@ -146,13 +162,13 @@ a:hover, a:active{
 .teamContainer {
     position:relative;
     overflow:auto;
-    width: 895px;
-    height: 700px;
+    width: 950px;
+    height: 750px;
 }
 .teamContainer2 {
     position:relative;
-    width: 895px;
-    height: 700px;
+    width: 950px;
+    height: 750px;
 }
 .visua {
     position:absolute;
@@ -227,12 +243,12 @@ a.cognLink:link,a.cognLink:visited,a.cognLink:hover,a.cognLink:active {
     border-top: 2px solid black;*/
 }
 .zeropoints {
-	background-image: url("mn_meno.gif"/*tpa=http://127.0.0.1:8988/Fantaski/icons/mn_meno.gif*/);
+	background-image: url("mn_meno.gif"/*tpa=http://localhost:8080/fantaski/icons/mn_meno.gif*/);
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 15px;
 	height: 15px;
 }
 .zeropoints:hover {
-	background-image: url("mn_meno_over.gif"/*tpa=http://127.0.0.1:8988/Fantaski/icons/mn_meno_over.gif*/);
+	background-image: url("mn_meno_over.gif"/*tpa=http://localhost:8080/fantaski/icons/mn_meno_over.gif*/);
 }

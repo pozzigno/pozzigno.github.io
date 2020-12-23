@@ -12,9 +12,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
     <title>Fantaski 2020 - 2021</title>
     <link rel="shortcut icon" href="merdina.ico">
-	<link href="selection.css" tppabs="http://127.0.0.1:8988/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
-	<script type="text/javascript" src="jquery-1.12.4.js" tppabs="http://127.0.0.1:8988/Fantaski/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="aa.js" tppabs="http://127.0.0.1:8988/Fantaski/aa.js"></script>
+	<link href="selection.css" tppabs="http://localhost:8080/fantaski/selection.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-1.12.4.js" tppabs="http://localhost:8080/fantaski/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="aa.js" tppabs="http://localhost:8080/fantaski/aa.js"></script>
 	
   <script type="text/javascript">    
     /* 
@@ -160,12 +160,12 @@
 	
 	
     </script>
-  <link href="selection.css" tppabs="http://127.0.0.1:8988/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
+  <link href="selection.css" tppabs="http://localhost:8080/fantaski/selection.css" rel="stylesheet" type="text/css"/>
   </head>
   
 <body>
 
-<form id="ff" name="ff" action="http://127.0.0.1:8988/Fantaski/gare.jsp" method="get">
+<form id="ff" name="ff" action="http://localhost:8080/fantaski/gare.jsp" method="get">
  <table border="2" width="100%">
         <tr><td valign="middle" height="30" align="center" colspan="2" style="font-size:30px;color:red">FantaSci 2020 - 2021</td></tr>
         
@@ -176,13 +176,16 @@
              <tr><td>    
              <div class="bar">
                 <div class="on" id="tab1">
-                    <a id="tab" href="javascript:document.ff.action='gare.jsp.htm'/*tpa=http://127.0.0.1:8988/Fantaski/gare.jsp*/;show('ins')">Inserimento Gare</a>
+                    <a id="tab" href="javascript:document.ff.action='gare.jsp.htm'/*tpa=http://localhost:8080/fantaski/gare.jsp*/;show('ins')">Inserimento Gare</a>
                 </div>
                 <div class="off" id="tab2">
-                    <a id="tab" href="javascript:document.ff.action='visuaGare.jsp.htm'/*tpa=http://127.0.0.1:8988/Fantaski/visuaGare.jsp*/;show('visu')">Visualizzazione Gare</a>
+                    <a id="tab" href="javascript:document.ff.action='visuaGare.jsp.htm'/*tpa=http://localhost:8080/fantaski/visuaGare.jsp*/;show('visu')">Visualizzazione Gare</a>
                 </div>
                 <div class="off" id="tab3">
-                    <a id="tab" href="javascript:document.ff.action='puntiGare.jsp.htm'/*tpa=http://127.0.0.1:8988/Fantaski/puntiGare.jsp*/;show('punti')">Punti Totali per Gara</a>
+                    <a id="tab" href="javascript:document.ff.action='puntiGare.jsp.htm'/*tpa=http://localhost:8080/fantaski/puntiGare.jsp*/;show('punti')">Punti Totali per Gara</a>
+                </div>
+                <div class="off">
+                    <a id="tab" href="javascript:void(0)" onclick="window.open('printGare.jsp.htm'/*tpa=http://localhost:8080/fantaski/printGare.jsp*/,'pg')">Calendario Gare</a>
                 </div>
              </div>
              </td></tr>
@@ -194,137 +197,123 @@
                  <select class="gare" name="discID" size="1" onchange="document.ff.submit()">
                     <option value="0_0">-</option>
                     
-                           <option value="8_SG_F" >2020-12-05   St.Moritz (SUI) - SG[F]</option>
+                           <option value="23_DH_M" >2020-12-28   Bormio                                                           (ITA) - DH[M]</option>
                     
-                           <option value="7_GS_M" >2020-12-05   S.Caterina Valfurva (ITA) - GS[M]</option>
+                           <option value="24_GS_F" >2020-12-28   Semmering                                                        (AUT) - GS[F]</option>
                     
-                           <option value="9_GS_M" >2020-12-06   S.Caterina Valfurva (ITA) - GS[M]</option>
+                           <option value="25_SG_M" >2020-12-29   Bormio                                                           (ITA) - SG[M]</option>
                     
-                           <option value="10_SG_F" >2020-12-06   St.Moritz (SUI) - SG[F]</option>
+                           <option value="26_SL_F" >2020-12-29   Semmering                                                        (AUT) - SL[F]</option>
                     
-                           <option value="11_DH_M" >2020-12-12   Val d Isere (FRA) - DH[M]</option>
+                           <option value="27_SL_F" >2021-01-03   Zagreb                                                           (CRO) - SL[F]</option>
                     
-                           <option value="12_GS_F" >2020-12-12   Courchevel (FRA) - GS[F]</option>
+                           <option value="28_SL_M" >2021-01-06   Zagreb                                                           (CRO) - SL[M]</option>
                     
-                           <option value="14_GS_F" >2020-12-13   Courchevel (FRA) - GS[F]</option>
+                           <option value="29_GS_M" >2021-01-08   Adelboden                                                        (SUI) - GS[M]</option>
                     
-                           <option value="13_SG_M" >2020-12-13   Val d Isere (FRA) - SG[M]</option>
+                           <option value="30_GS_M" >2021-01-09   Adelboden                                                        (SUI) - GS[M]</option>
                     
-                           <option value="15_SG_M" >2020-12-18   Val Gardena (ITA) - SG[M]</option>
+                           <option value="31_DH_F" >2021-01-09   St.Anton                                                         (AUT) - DH[F]</option>
                     
-                           <option value="16_DH_F" >2020-12-18   Val d Isere (FRA) - DH[F]</option>
+                           <option value="32_SL_M" >2021-01-10   Adelboden                                                        (SUI) - SL[M]</option>
                     
-                           <option value="17_DH_M" >2020-12-19   Val Gardena (ITA) - DH[M]</option>
+                           <option value="33_SG_F" >2021-01-10   St.Anton                                                         (AUT) - SG[F]</option>
                     
-                           <option value="18_DH_F" >2020-12-19   Val d Isere (FRA) - DH[F]</option>
+                           <option value="34_SL_F" >2021-01-12   Flachau                                                          (AUT) - SL[F]</option>
                     
-                           <option value="19_GS_M" >2020-12-20   Alta Badia (ITA) - GS[M]</option>
+                           <option value="35_DH_M" >2021-01-15   Wengen                                                           (SUI) - DH[M]</option>
                     
-                           <option value="20_SG_F" >2020-12-20   Val d Isere (FRA) - SG[F]</option>
+                           <option value="36_DH_M" >2021-01-16   Wengen                                                           (SUI) - DH[M]</option>
                     
-                           <option value="21_SL_M" >2020-12-21   Alta Badia (ITA) - SL[M]</option>
+                           <option value="37_GS_F" >2021-01-16   Maribor                                                          (SLO) - GS[F]</option>
                     
-                           <option value="22_SL_M" >2020-12-22   Madonna di Campiglio (ITA) - SL[M]</option>
+                           <option value="38_SL_M" >2021-01-17   Wengen                                                           (SUI) - SL[M]</option>
                     
-                           <option value="24_GS_F" >2020-12-28   Semmering (AUT) - GS[F]</option>
+                           <option value="39_GS_F" >2021-01-17   Maribor                                                          (SLO) - GS[F]</option>
                     
-                           <option value="23_DH_M" >2020-12-28   Bormio (ITA) - DH[M]</option>
+                           <option value="40_DH_F" >2021-01-22   Crans Montana                                                    (SUI) - DH[F]</option>
                     
-                           <option value="25_SG_M" >2020-12-29   Bormio (ITA) - SG[M]</option>
+                           <option value="41_SG_M" >2021-01-22   Kitzbuhel                                                        (AUT) - SG[M]</option>
                     
-                           <option value="26_SL_F" >2020-12-29   Semmering (AUT) - SL[F]</option>
+                           <option value="42_DH_M" >2021-01-23   Kitzbuhel                                                        (AUT) - DH[M]</option>
                     
-                           <option value="27_SL_F" >2021-01-03   Zagreb (CRO) - SL[F]</option>
+                           <option value="43_DH_F" >2021-01-23   Crans Montana                                                    (SUI) - DH[F]</option>
                     
-                           <option value="28_SL_M" >2021-01-06   Zagreb (CRO) - SL[M]</option>
+                           <option value="44_SL_M" >2021-01-24   Kitzbuhel                                                        (AUT) - SL[M]</option>
                     
-                           <option value="29_GS_M" >2021-01-08   Adelboden (SUI) - GS[M]</option>
+                           <option value="45_DH_F" >2021-01-24   Crans Montana                                                    (SUI) - DH[F]</option>
                     
-                           <option value="30_GS_M" >2021-01-09   Adelboden (SUI) - GS[M]</option>
+                           <option value="46_SL_M" >2021-01-26   Schladming                                                       (AUT) - SL[M]</option>
                     
-                           <option value="31_DH_F" >2021-01-09   St.Anton (AUT) - DH[F]</option>
+                           <option value="47_GS_F" >2021-01-26   Kronplatz                                                        (ITA) - GS[F]</option>
                     
-                           <option value="33_SG_F" >2021-01-10   St.Anton (AUT) - SG[F]</option>
+                           <option value="48_SL_M" >2021-01-30   Chamonix                                                         (FRA) - SL[M]</option>
                     
-                           <option value="32_SL_M" >2021-01-10   Adelboden (SUI) - SL[M]</option>
+                           <option value="49_DH_F" >2021-01-30   Garmisch                                                         (GER) - DH[F]</option>
                     
-                           <option value="34_SL_F" >2021-01-12   Flachau (AUT) - SL[F]</option>
+                           <option value="50_SL_M" >2021-01-31   Chamonix                                                         (FRA) - SL[M]</option>
                     
-                           <option value="35_DH_M" >2021-01-15   Wengen (SUI) - DH[M]</option>
+                           <option value="51_SG_F" >2021-01-31   Garmisch                                                         (GER) - SG[F]</option>
                     
-                           <option value="36_DH_M" >2021-01-16   Wengen (SUI) - DH[M]</option>
+                           <option value="52_SG_M" >2021-02-05   Garmisch                                                         (GER) - SG[M]</option>
                     
-                           <option value="37_GS_F" >2021-01-16   Maribor (SLO) - GS[F]</option>
+                           <option value="53_DH_M" >2021-02-06   Garmisch                                                         (GER) - DH[M]</option>
                     
-                           <option value="38_SL_M" >2021-01-17   Wengen (SUI) - SL[M]</option>
+                           <option value="54_SG_F" >2021-02-09   Cortina                                                          (ITA) - SG[F]</option>
                     
-                           <option value="39_GS_F" >2021-01-17   Maribor (SLO) - GS[F]</option>
+                           <option value="55_SG_M" >2021-02-09   Cortina                                                          (ITA) - SG[M]</option>
                     
-                           <option value="40_SG_M" >2021-01-22   Kitzbuhel (AUT) - SG[M]</option>
+                           <option value="56_DH_F" >2021-02-13   Cortina                                                          (ITA) - DH[F]</option>
                     
-                           <option value="41_DH_M" >2021-01-23   Kitzbuhel (AUT) - DH[M]</option>
+                           <option value="57_DH_M" >2021-02-14   Cortina                                                          (ITA) - DH[M]</option>
                     
-                           <option value="42_DH_F" >2021-01-23   Crans Montana (SUI) - DH[F]</option>
+                           <option value="58_GS_M" >2021-02-16   Cortina                                                          (ITA) - GS[M]</option>
                     
-                           <option value="43_SL_M" >2021-01-24   Kitzbuhel (AUT) - SL[M]</option>
+                           <option value="59_GS_F" >2021-02-16   Cortina                                                          (ITA) - GS[F]</option>
                     
-                           <option value="44_DH_F" >2021-01-24   Crans Montana (SUI) - DH[F]</option>
+                           <option value="60_GS_F" >2021-02-18   Cortina                                                          (ITA) - GS[F]</option>
                     
-                           <option value="45_SL_M" >2021-01-26   Schladming (AUT) - SL[M]</option>
+                           <option value="61_GS_M" >2021-02-19   Cortina                                                          (ITA) - GS[M]</option>
                     
-                           <option value="46_GS_F" >2021-01-26   Kronplatz (ITA) - GS[F]</option>
+                           <option value="62_SL_F" >2021-02-20   Cortina                                                          (ITA) - SL[F]</option>
                     
-                           <option value="47_SL_M" >2021-01-30   Chamonix (FRA) - SL[M]</option>
+                           <option value="63_SL_M" >2021-02-21   Cortina                                                          (ITA) - SL[M]</option>
                     
-                           <option value="48_DH_F" >2021-01-30   Garmisch (GER) - DH[F]</option>
+                           <option value="64_GS_M" >2021-02-27   Bansko                                                           (BUL) - GS[M]</option>
                     
-                           <option value="50_SG_F" >2021-01-31   Garmisch (GER) - SG[F]</option>
+                           <option value="66_GS_M" >2021-02-28   Bansko                                                           (BUL) - GS[M]</option>
                     
-                           <option value="49_SL_M" >2021-01-31   Chamonix (FRA) - SL[M]</option>
+                           <option value="68_DH_M" >2021-03-06   Kvitfjell                                                        (NOR) - DH[M]</option>
                     
-                           <option value="51_SG_M" >2021-02-05   Garmisch (GER) - SG[M]</option>
+                           <option value="69_GS_F" >2021-03-06   Jasna                                                            (SVK) - GS[F]</option>
                     
-                           <option value="52_DH_M" >2021-02-06   Garmisch (GER) - DH[M]</option>
+                           <option value="70_SG_M" >2021-03-07   Kvitfjell                                                        (NOR) - SG[M]</option>
                     
-                           <option value="53_GS_M" >2021-02-27   Bansko (BUL) - GS[M]</option>
+                           <option value="71_SL_F" >2021-03-07   Jasna                                                            (SVK) - SL[F]</option>
                     
-                           <option value="54_DH_F" >2021-02-27   Yanqing (CHN) - DH[F]</option>
+                           <option value="72_SL_F" >2021-03-12   Are                                                              (SWE) - SL[F]</option>
                     
-                           <option value="55_GS_M" >2021-02-28   Bansko (BUL) - GS[M]</option>
+                           <option value="73_GS_M" >2021-03-13   Kranjska Gora                                                    (SLO) - GS[M]</option>
                     
-                           <option value="56_SG_F" >2021-02-28   Yanqing (CHN) - SG[F]</option>
+                           <option value="74_SL_F" >2021-03-13   Are                                                              (SWE) - SL[F]</option>
                     
-                           <option value="57_DH_M" >2021-03-06   Kvitfjell (NOR) - DH[M]</option>
+                           <option value="75_SL_M" >2021-03-14   Kranjska Gora                                                    (SLO) - SL[M]</option>
                     
-                           <option value="58_GS_F" >2021-03-06   Jasna (SVK) - GS[F]</option>
+                           <option value="76_DH_M" >2021-03-17   Lenzerheide                                                      (SUI) - DH[M]</option>
                     
-                           <option value="59_SG_M" >2021-03-07   Kvitfjell (NOR) - SG[M]</option>
+                           <option value="77_DH_F" >2021-03-17   Lenzerheide                                                      (SUI) - DH[F]</option>
                     
-                           <option value="60_SL_F" >2021-03-07   Jasna (SVK) - SL[F]</option>
+                           <option value="78_SG_M" >2021-03-18   Lenzerheide                                                      (SUI) - SG[M]</option>
                     
-                           <option value="61_SL_F" >2021-03-12   Are (SWE) - SL[F]</option>
+                           <option value="79_SG_F" >2021-03-18   Lenzerheide                                                      (SUI) - SG[F]</option>
                     
-                           <option value="63_SL_F" >2021-03-13   Are (SWE) - SL[F]</option>
+                           <option value="80_GS_M" >2021-03-20   Lenzerheide                                                      (SUI) - GS[M]</option>
                     
-                           <option value="62_GS_M" >2021-03-13   Kranjska Gora (SLO) - GS[M]</option>
+                           <option value="81_SL_F" >2021-03-20   Lenzerheide                                                      (SUI) - SL[F]</option>
                     
-                           <option value="64_SL_M" >2021-03-14   Kranjska Gora (SLO) - SL[M]</option>
+                           <option value="82_SL_M" >2021-03-21   Lenzerheide                                                      (SUI) - SL[M]</option>
                     
-                           <option value="66_DH_F" >2021-03-17   Lenzerheide (SUI) - DH[F]</option>
-                    
-                           <option value="65_DH_M" >2021-03-17   Lenzerheide (SUI) - DH[M]</option>
-                    
-                           <option value="67_SG_M" >2021-03-18   Lenzerheide (SUI) - SG[M]</option>
-                    
-                           <option value="68_SG_F" >2021-03-18   Lenzerheide (SUI) - SG[F]</option>
-                    
-                           <option value="69_GS_M" >2021-03-20   Lenzerheide (SUI) - GS[M]</option>
-                    
-                           <option value="70_SL_F" >2021-03-20   Lenzerheide (SUI) - SL[F]</option>
-                    
-                           <option value="72_GS_F" >2021-03-21   Lenzerheide (SUI) - GS[F]</option>
-                    
-                           <option value="71_SL_M" >2021-03-21   Lenzerheide (SUI) - SL[M]</option>
+                           <option value="83_GS_F" >2021-03-21   Lenzerheide                                                      (SUI) - GS[F]</option>
                            
                  </select>
                  
@@ -350,15 +339,15 @@
         <td valign="top">
             <div style="position:relative;">
 				    <table>
-        <tr><td><a href="index.jsp-pag=squadre.htm" tppabs="http://127.0.0.1:8988/Fantaski/index.jsp?pag=squadre"><h1 style="font-size:25px;">Squadre</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=gare.htm" tppabs="http://127.0.0.1:8988/Fantaski/index.jsp?pag=gare"><h1 style="font-size:25px;">Gare</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=class.htm" tppabs="http://127.0.0.1:8988/Fantaski/index.jsp?pag=class"><h1 style="font-size:25px;">Classifiche</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=frmz_m.htm" tppabs="http://127.0.0.1:8988/Fantaski/index.jsp?pag=frmz_m"><h1 style="font-size:25px;">Formazioni M</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=frmz_f.htm" tppabs="http://127.0.0.1:8988/Fantaski/index.jsp?pag=frmz_f"><h1 style="font-size:25px;">Formazioni F</h1></a></td></tr>
+        <tr><td><a href="index.jsp-pag=squadre.htm" tppabs="http://localhost:8080/fantaski/index.jsp?pag=squadre"><h1 style="font-size:25px;">Squadre</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=gare.htm" tppabs="http://localhost:8080/fantaski/index.jsp?pag=gare"><h1 style="font-size:25px;">Gare</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=class.htm" tppabs="http://localhost:8080/fantaski/index.jsp?pag=class"><h1 style="font-size:25px;">Classifiche</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=frmz_m.htm" tppabs="http://localhost:8080/fantaski/index.jsp?pag=frmz_m"><h1 style="font-size:25px;">Formazioni M</h1></a></td></tr>
+		<tr><td><a href="index.jsp-pag=frmz_f.htm" tppabs="http://localhost:8080/fantaski/index.jsp?pag=frmz_f"><h1 style="font-size:25px;">Formazioni F</h1></a></td></tr>
     </table>
 				
 				<table cellpadding="0" cellspacing="0"><tbody>
-					<tr
+					<tr>
                                             <td colspan="2">
 						<h1 style="color: rgb(102, 102, 102);font-size:25px;">Compilazione Risultato Corrente<button type="button" onclick="javascript:tokenizzalo('aaa')">Compila</button></h1>
                                             </td>
