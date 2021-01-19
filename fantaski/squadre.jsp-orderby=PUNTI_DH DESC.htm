@@ -30,7 +30,7 @@
     
     
     function show(divId) {
-        for(var i=0; i<tt.length; i++) {
+        for(var i=0; divId != null && divId.length > 0 && i<tt.length; i++) {
             var htmlTAB = tt[i];
             var tab = document.getElementById(htmlTAB.name);
             var div = document.getElementById(htmlTAB.cod);
@@ -51,7 +51,8 @@
     <script type="text/javascript" src="jquery-1.12.4.js" tppabs="http://localhost:8080/fantaski/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="aa.js" tppabs="http://localhost:8080/fantaski/aa.js"></script>
   </head>
-  <body>
+  
+  <body onload="javascript:show('')">
    
   <table cellpadding="0" cellspacing="0" width="100%">
   <tr><td>
@@ -96,22 +97,22 @@
             <table border="1" cellpadding="5" cellspacing="5">
                    <tr>
                        <th>Num</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME*/)">Cognome</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME&currtab=a*/)">Cognome</th>
                        <th>Nome</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ*/)">Naz</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO*/)">Sex</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC*/)"><table><tr><td>Costo</td></tr>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ&currtab=a*/)">Naz</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO&currtab=a*/)">Sex</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC&currtab=a*/)"><table><tr><td>Costo</td></tr>
                             <tr><td style="background-color:black;color:yellow">0</td></tr>
                        </table></th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH*/)">DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG*/)">SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS*/)">GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL*/)">SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC*/)">Punti DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC*/)">Punti SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC*/)">Punti GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC*/)">Punti SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp*/)">Punti Totali</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH&currtab=a*/)">DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG&currtab=a*/)">SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS&currtab=a*/)">GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL&currtab=a*/)">SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC&currtab=a*/)">Punti DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC&currtab=a*/)">Punti SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC&currtab=a*/)">Punti GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC&currtab=a*/)">Punti SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-&currtab=a.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?&currtab=a*/)">Punti Totali</th>
                    </tr>
                                               
                             <tr >
@@ -782,22 +783,22 @@
             <table border="1" cellpadding="5" cellspacing="5">
                    <tr>
                        <th>Num</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME*/)">Cognome</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME&currtab=b*/)">Cognome</th>
                        <th>Nome</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ*/)">Naz</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO*/)">Sex</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC*/)"><table><tr><td>Costo</td></tr>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ&currtab=b*/)">Naz</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO&currtab=b*/)">Sex</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC&currtab=b*/)"><table><tr><td>Costo</td></tr>
                             <tr><td style="background-color:black;color:yellow">0</td></tr>
                        </table></th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH*/)">DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG*/)">SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS*/)">GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL*/)">SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC*/)">Punti DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC*/)">Punti SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC*/)">Punti GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC*/)">Punti SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp*/)">Punti Totali</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH&currtab=b*/)">DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG&currtab=b*/)">SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS&currtab=b*/)">GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL&currtab=b*/)">SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC&currtab=b*/)">Punti DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC&currtab=b*/)">Punti SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC&currtab=b*/)">Punti GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC&currtab=b*/)">Punti SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-&currtab=b.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?&currtab=b*/)">Punti Totali</th>
                    </tr>
                                               
                             <tr >
@@ -1556,22 +1557,22 @@
             <table border="1" cellpadding="5" cellspacing="5">
                    <tr>
                        <th>Num</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME*/)">Cognome</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME&currtab=m*/)">Cognome</th>
                        <th>Nome</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ*/)">Naz</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO*/)">Sex</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC*/)"><table><tr><td>Costo</td></tr>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ&currtab=m*/)">Naz</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO&currtab=m*/)">Sex</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC&currtab=m*/)"><table><tr><td>Costo</td></tr>
                             <tr><td style="background-color:black;color:yellow">0</td></tr>
                        </table></th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH*/)">DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG*/)">SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS*/)">GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL*/)">SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC*/)">Punti DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC*/)">Punti SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC*/)">Punti GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC*/)">Punti SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp*/)">Punti Totali</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH&currtab=m*/)">DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG&currtab=m*/)">SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS&currtab=m*/)">GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL&currtab=m*/)">SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC&currtab=m*/)">Punti DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC&currtab=m*/)">Punti SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC&currtab=m*/)">Punti GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC&currtab=m*/)">Punti SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-&currtab=m.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?&currtab=m*/)">Punti Totali</th>
                    </tr>
                                               
                             <tr >
@@ -2264,22 +2265,22 @@
             <table border="1" cellpadding="5" cellspacing="5">
                    <tr>
                        <th>Num</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME*/)">Cognome</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME&currtab=p*/)">Cognome</th>
                        <th>Nome</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ*/)">Naz</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO*/)">Sex</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC*/)"><table><tr><td>Costo</td></tr>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ&currtab=p*/)">Naz</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO&currtab=p*/)">Sex</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC&currtab=p*/)"><table><tr><td>Costo</td></tr>
                             <tr><td style="background-color:black;color:yellow">0</td></tr>
                        </table></th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH*/)">DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG*/)">SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS*/)">GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL*/)">SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC*/)">Punti DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC*/)">Punti SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC*/)">Punti GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC*/)">Punti SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp*/)">Punti Totali</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH&currtab=p*/)">DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG&currtab=p*/)">SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS&currtab=p*/)">GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL&currtab=p*/)">SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC&currtab=p*/)">Punti DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC&currtab=p*/)">Punti SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC&currtab=p*/)">Punti GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC&currtab=p*/)">Punti SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-&currtab=p.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?&currtab=p*/)">Punti Totali</th>
                    </tr>
                                               
                             <tr >
@@ -2950,22 +2951,22 @@
             <table border="1" cellpadding="5" cellspacing="5">
                    <tr>
                        <th>Num</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME*/)">Cognome</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COGNOME&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COGNOME&currtab=v*/)">Cognome</th>
                        <th>Nome</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ*/)">Naz</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO*/)">Sex</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC*/)"><table><tr><td>Costo</td></tr>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=NAZ&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=NAZ&currtab=v*/)">Naz</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SESSO&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SESSO&currtab=v*/)">Sex</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=COSTO DESC&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=COSTO DESC&currtab=v*/)"><table><tr><td>Costo</td></tr>
                             <tr><td style="background-color:black;color:yellow">0</td></tr>
                        </table></th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH*/)">DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG*/)">SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS*/)">GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL*/)">SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC*/)">Punti DH</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC*/)">Punti SG</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC*/)">Punti GS</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC*/)">Punti SL</th>
-                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp*/)">Punti Totali</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=DH&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=DH&currtab=v*/)">DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SG&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SG&currtab=v*/)">SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=GS&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=GS&currtab=v*/)">GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=SL&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=SL&currtab=v*/)">SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_DH DESC&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_DH DESC&currtab=v*/)">Punti DH</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SG DESC&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SG DESC&currtab=v*/)">Punti SG</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_GS DESC&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_GS DESC&currtab=v*/)">Punti GS</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-orderby=PUNTI_SL DESC&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?orderby=PUNTI_SL DESC&currtab=v*/)">Punti SL</th>
+                       <th class="text_order" title="Ordina" onclick="javascript:location.replace('squadre.jsp-&currtab=v.htm'/*tpa=http://localhost:8080/fantaski/squadre.jsp?&currtab=v*/)">Punti Totali</th>
                    </tr>
                                               
                             <tr  style="opacity:0.3">
