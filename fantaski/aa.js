@@ -96,7 +96,7 @@ function tokenizzalo(id) {
 						cc.each(function(){
 							var cod = $(this).parent().find("input:hidden[zname='HH_cod']").val();
 							var name = $(this).parent().find("input:hidden[zname='HH_nome']").val();
-							if(name.trim() == nome.trim()) {
+							if(name.trim() == nome) {
 								console.log(name + ' ' + cogn);
 								found = true;
 								$(this).parent().find("select.HH_point_" + cod + " option[value=0]").attr("selected",false);
@@ -149,5 +149,5 @@ function replaceSborona(s) {
 	s = s.replace(new RegExp("ì","g"),"i");
 	s = s.replace(new RegExp("ò","g"),"o");
 	s = s.replace(new RegExp("ù","g"),"u");
-	return s;
+	return s.trim();
 }
