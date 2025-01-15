@@ -13,9 +13,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Fantaski 2024 - 2025</title>
     <link rel="shortcut icon" href="merdina.ico">
-	<link href="selection.css" tppabs="http://localhost:8080/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
-	<script type="text/javascript" src="jquery-1.12.4.js" tppabs="http://localhost:8080/Fantaski/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="aa.js" tppabs="http://localhost:8080/Fantaski/aa.js"></script>
+	<link href="selection.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="aa.js"></script>
 	
   <script type="text/javascript">    
     /* 
@@ -161,12 +161,12 @@
 	
 	
     </script>
-  <link href="selection.css" tppabs="http://localhost:8080/Fantaski/selection.css" rel="stylesheet" type="text/css"/>
+  <link href="selection.css" rel="stylesheet" type="text/css"/>
   </head>
   
 <body>
 
-<form id="ff" name="ff" action="http://localhost:8080/Fantaski/gare.jsp" method="get">
+<form id="ff" name="ff" action="gare.jsp" method="get">
  <table border="2" width="100%">
         <tr><td valign="middle" height="30" align="center" colspan="2" style="font-size:30px;color:red">FantaSci 2024 - 2025</td></tr>
         
@@ -177,16 +177,16 @@
              <tr><td>    
              <div class="bar">
                 <div class="on" id="tab1">
-                    <a id="tab" href="javascript:document.ff.action='gare.jsp.htm'/*tpa=http://localhost:8080/Fantaski/gare.jsp*/;show('ins')">Inserimento Gare</a>
+                    <a id="tab" href="javascript:document.ff.action='gare.jsp';show('ins')">Inserimento Gare</a>
                 </div>
                 <div class="off" id="tab2">
-                    <a id="tab" href="javascript:document.ff.action='visuaGare.jsp.htm'/*tpa=http://localhost:8080/Fantaski/visuaGare.jsp*/;show('visu')">Visualizzazione Gare</a>
+                    <a id="tab" href="javascript:document.ff.action='visuaGare.jsp';show('visu')">Visualizzazione Gare</a>
                 </div>
                 <div class="off" id="tab3">
-                    <a id="tab" href="javascript:document.ff.action='puntiGare.jsp.htm'/*tpa=http://localhost:8080/Fantaski/puntiGare.jsp*/;show('punti')">Punti Totali per Gara</a>
+                    <a id="tab" href="javascript:document.ff.action='puntiGare.jsp';show('punti')">Punti Totali per Gara</a>
                 </div>
                 <div class="off">
-                    <a id="tab" href="javascript:void(0)" onclick="window.open('printGare.jsp.htm'/*tpa=http://localhost:8080/Fantaski/printGare.jsp*/,'pg')">Stampa Calendario Gare</a>
+                    <a id="tab" href="javascript:void(0)" onclick="window.open('printGare.jsp','pg')">Stampa Calendario Gare</a>
                 </div>
              </div>
              </td></tr>
@@ -197,18 +197,6 @@
              <div id="insT" style="visibility:visible">
                  <select class="gare" name="discID" size="1" onchange="document.ff.submit()">
                     <option value="0_0">-</option>
-                    
-                           <option value="15_SL_M" >2025-01-08   Madonna di Campiglio                                             (ITA) - SL[M]</option>
-                    
-                           <option value="16_GS_M" >2025-01-11   Adelboden                                                        (SUI) - GS[M]</option>
-                    
-                           <option value="52_DH_F" >2025-01-11   St.Anton                                                         (AUT) - DH[F]</option>
-                    
-                           <option value="53_SG_F" >2025-01-12   St.Anton                                                         (AUT) - SG[F]</option>
-                    
-                           <option value="17_SL_M" >2025-01-12   Adelboden                                                        (SUI) - SL[M]</option>
-                    
-                           <option value="54_SL_F" >2025-01-14   Flachau                                                          (AUT) - SL[F]</option>
                     
                            <option value="18_SG_M" >2025-01-17   Wengen                                                           (SUI) - SG[M]</option>
                     
@@ -326,11 +314,11 @@
         <td valign="top">
             <div style="position:relative;">
 				    <table>
-        <tr><td><a href="index.jsp-pag=squadre.htm" tppabs="http://localhost:8080/Fantaski/index.jsp?pag=squadre"><h1 style="font-size:25px;">Squadre</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=gare.htm" tppabs="http://localhost:8080/Fantaski/index.jsp?pag=gare"><h1 style="font-size:25px;">Gare</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=class.htm" tppabs="http://localhost:8080/Fantaski/index.jsp?pag=class"><h1 style="font-size:25px;">Classifiche</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=frmz_m.htm" tppabs="http://localhost:8080/Fantaski/index.jsp?pag=frmz_m"><h1 style="font-size:25px;">Formazioni M</h1></a></td></tr>
-		<tr><td><a href="index.jsp-pag=frmz_f.htm" tppabs="http://localhost:8080/Fantaski/index.jsp?pag=frmz_f"><h1 style="font-size:25px;">Formazioni F</h1></a></td></tr>
+        <tr><td><a href="index.jsp?pag=squadre"><h1 style="font-size:25px;">Squadre</h1></a></td></tr>
+		<tr><td><a href="index.jsp?pag=gare"><h1 style="font-size:25px;">Gare</h1></a></td></tr>
+		<tr><td><a href="index.jsp?pag=class"><h1 style="font-size:25px;">Classifiche</h1></a></td></tr>
+		<tr><td><a href="index.jsp?pag=frmz_m"><h1 style="font-size:25px;">Formazioni M</h1></a></td></tr>
+		<tr><td><a href="index.jsp?pag=frmz_f"><h1 style="font-size:25px;">Formazioni F</h1></a></td></tr>
     </table>
 				
 				<table cellpadding="0" cellspacing="0"><tbody>
