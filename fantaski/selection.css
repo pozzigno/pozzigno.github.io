@@ -24,7 +24,7 @@ body
 	cursor: pointer;
 }
 .disc_upd:hover {
-	opacity: 0.5;
+	opacity: 0.3;
 	background-color: gray;
 }
 .text_order {

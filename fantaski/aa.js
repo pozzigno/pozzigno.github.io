@@ -50,6 +50,15 @@ function updateChoose(check,cod,disc) {
     xmlhttp.open("GET",uu,true);
     xmlhttp.send();
 }
+function updateInjury(htmlObj,cod,isInjury,tcod) {
+    var uu = "updaterChoose" + "?" + "type=inj" + "&cod="+cod + "&choose=" + !isInjury;
+    $.ajax({
+  		url: uu,
+  		context: htmlObj
+	}).done(function() {
+  		location.replace('./squadre.jsp?currtab=' + tcod);
+	});
+}
 function telecomandoForm(url,go) {
     url = url + "?" + "pag=" + go;
     location.replace(url);
@@ -128,11 +137,9 @@ function tokenizzalo(id) {
 	
 	
 	// aggiorna dati squadre
-	updTotPoints('a');
-	updTotPoints('b');
-	updTotPoints('m');
-	updTotPoints('p');
-	updTotPoints('v');
+	for(var i=0; _TEAMS != null && i<_TEAMS.length; i++) {
+		updTotPoints(_TEAMS[i].cod);
+	}
 	
 	console.log(tutti);
 	console.log(nntrovati);
